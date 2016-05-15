@@ -13,6 +13,7 @@ use pocketmine\utils\TextFormat;
 class Main extends PluginBase implements Listener{
 
 	private static $instance = null;
+	
 	public function onEnable(){
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "MultiLanguage Has Been Enabled.");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "By: MCrafterss. http://github.com/MCrafterss");
