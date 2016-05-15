@@ -21,32 +21,30 @@ class Main extends PluginBase implements Listener{
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, array());
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, array());
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, array());
+		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, array());
 	}
 	
 	public static function getInstance(){
 		return self::$instance;
 	}
 	public function getPlayerLang($player){
-		$player->getConfig()->get($player)
+		$this->data->get($player)
 	}
 	
 	public function setPlayerLang($player, $language){
-		$player->getConfig()->set($player,$language)
+		$this->data->set($player,$language)
 	}
 	
 	public function Translate($player, $message){
 		$lang = $player->getPlayerLang($player);
 		if ($lang === nl){
-			$message2 = $this->NL->get($message);
-			$player->sendMessage($message2);
+			$this->NL->get($message);
 		}
 		if ($lang === en){
-			$message2 = $this->EN->get($message);
-			$player->sendMessage($message2);
+			$this->EN->get($message);
 		}
 		if ($lang === fr){
-			$message2 = $this->FR->get($message);
-			$player->sendMessage($message2);
+			$this->FR->get($message);
 		}
 	}
 }
