@@ -22,6 +22,7 @@ class Main extends PluginBase implements Listener{
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, array());
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, array());
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, array());
+		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML, array());
 		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, array());
 	}
 	
@@ -46,6 +47,9 @@ class Main extends PluginBase implements Listener{
 		}
 		if ($lang === fr){
 			$this->FR->get($message);
+		}
+		if ($lang === de){
+			$this->DE->get($message);
 		}
 	}
 }
