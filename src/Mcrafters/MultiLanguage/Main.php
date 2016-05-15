@@ -19,18 +19,25 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "By: MCrafterss. http://github.com/MCrafterss");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
-		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, array());
-		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, array());
-		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, array());
-		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML, array());
-		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, array());
+		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, [
+            	'testmessage' => hallo
+        	]);
+		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, [
+            	'testmessage' => hello
+        	]);
+		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, [
+            	'testmessage' => bonjour
+        	]);
+		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML, [
+            	'testmessage' => hallo2
+        	]);
+		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, [
+            	'driesboy' => nl
+        	]);
 	}
 	
 	public static function getInstance(){
 		return self::$instance;
-	}
-	public function getPlayerLang($player){
-		$this->data->get($player)
 	}
 	
 	public function setPlayerLang($player, $language){
@@ -38,7 +45,7 @@ class Main extends PluginBase implements Listener{
 	}
 	
 	public function Translate($player, $message){
-		$lang = $player->getPlayerLang($player);
+		$lang = $this->data->get($player);
 		if ($lang === nl){
 			$this->NL->get($message);
 		}
