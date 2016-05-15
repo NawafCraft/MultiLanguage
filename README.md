@@ -2,5 +2,11 @@
 
 [![Join the chat at https://gitter.im/MCrafterss/MultiLanguage](https://badges.gitter.im/MCrafterss/MultiLanguage.svg)](https://gitter.im/MCrafterss/MultiLanguage?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-MultiLanguage plugin for pocketmine
-Your plugin can now have simple multiLanguage support
+MultiLanguage Plugin for PocketMine-MP
+
+Your Plugin can now have simple multi Language support
+
+# FEATURES
+- [x] Easy use
+- [ ] API
+- [x] Multi Languages
