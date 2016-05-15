@@ -12,7 +12,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use Mcrafters\MultiLanguage\Main;
 
 
-class AvoidOps extends PluginBase implements Listener {
+class test extends PluginBase implements Listener {
 
 	public function onEnable(){
         	$this->getServer()->getPluginManager()->registerEvents($this, $this);
