@@ -20,6 +20,6 @@ class test extends PluginBase implements Listener {
 
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
-        	$player->sendMessage(MultiLanguage::getInstance()->translate($player, "testmessage"));
+		$this->plugin->getServer()->getPluginManager()->getPlugin("MultiLanguage")->Translate($player, "testmessage");
         }
 }
