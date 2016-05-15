@@ -18,6 +18,7 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "MultiLanguage Has Been Enabled.");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "By: MCrafterss. http://github.com/MCrafterss");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		@mkdir($this->getDataFolder(), 0777, true);
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, array());
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, array());
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, array());
