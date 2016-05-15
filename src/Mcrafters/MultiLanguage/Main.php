@@ -20,19 +20,19 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, [
-            	'testmessage' => hallo
+            	'testmessage' => 'hallo'
         	]);
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, [
-            	'testmessage' => hello
+            	'testmessage' => 'hello'
         	]);
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, [
-            	'testmessage' => bonjour
+            	'testmessage' => 'bonjour'
         	]);
 		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML, [
-            	'testmessage' => hallo2
+            	'testmessage' => 'hallo2'
         	]);
 		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, [
-            	'driesboy' => nl
+            	'driesboy' => 'nl'
         	]);
 	}
 	
