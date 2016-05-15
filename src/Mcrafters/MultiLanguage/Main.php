@@ -26,7 +26,8 @@ class Main extends PluginBase implements Listener{
 	}
 	
 	public static function getInstance(){
-		return self::$instance;
+    		$instance = new Main();
+    		return $instance;
 	}
 	
 	public function setPlayerLang($player, $language){
@@ -36,16 +37,16 @@ class Main extends PluginBase implements Listener{
 	
 	public function Translate($player, $message){
 		$lang = $this->data->get($player);
-		if ($lang === nl){
+		if ($lang === "nl"){
 			$this->NL->get($message);
 		}
-		if ($lang === en){
+		if ($lang === "en"){
 			$this->EN->get($message);
 		}
-		if ($lang === fr){
+		if ($lang === "fr"){
 			$this->FR->get($message);
 		}
-		if ($lang === de){
+		if ($lang === "de"){
 			$this->DE->get($message);
 		}
 	}
