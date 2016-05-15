@@ -22,18 +22,23 @@ class Main extends PluginBase implements Listener{
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, [
             	'testmessage' => 'hallo'
         	]);
+        	$this->NL->save();
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, [
             	'testmessage' => 'hello'
         	]);
+        	$this->EN->save();
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, [
             	'testmessage' => 'bonjour'
         	]);
+        	$this->FR->save();
 		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML, [
             	'testmessage' => 'hallo2'
         	]);
+        	$this->DE->save();
 		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, [
             	'driesboy' => 'nl'
         	]);
+        	$this->data->save();
 	}
 	
 	public static function getInstance(){
@@ -42,6 +47,7 @@ class Main extends PluginBase implements Listener{
 	
 	public function setPlayerLang($player, $language){
 		$this->data->set($player,$language);
+		$this->data->save();
 	}
 	
 	public function Translate($player, $message){
