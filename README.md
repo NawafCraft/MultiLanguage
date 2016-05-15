@@ -7,6 +7,6 @@ MultiLanguage Plugin for PocketMine-MP
 Your Plugin can now have simple multi Language support
 
 # FEATURES
-- [x] Easy use
+- [x] Easy to use
 - [ ] API
 - [x] Multi Languages
