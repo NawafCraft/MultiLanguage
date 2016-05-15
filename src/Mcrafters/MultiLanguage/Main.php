@@ -18,7 +18,6 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "MultiLanguage Has Been Enabled.");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE . "By: MCrafterss. http://github.com/MCrafterss");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->saveDefaultConfig();
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, [
             	'testmessage' => 'hallo'
         	]);
