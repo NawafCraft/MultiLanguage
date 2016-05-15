@@ -9,7 +9,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 use pocketmine\event\player\PlayerJoinEvent;
 
-use Mcrafters\MultiLanguage\Main;
+use Mcrafters\MultiLanguage;
 
 
 class test extends PluginBase implements Listener {
@@ -20,6 +20,6 @@ class test extends PluginBase implements Listener {
 
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
-		$this->plugin->getServer()->getPluginManager()->getPlugin("MultiLanguage")->Translate($player, "testmessage");
+		$player->sendMessage(MultiLanguage::getInstance()->translate($player, "testmessage"));
         }
 }
