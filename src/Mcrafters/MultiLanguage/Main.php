@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener{
 		$this->data->save();
 	}
 	
-	public function Translate($player, $message){
+	public function Translate($player, $message, bool $force = false, $issuer = "none") : int{
 		$lang = $this->data->get($player);
 		if ($lang === nl){
 			$this->NL->get($message);
