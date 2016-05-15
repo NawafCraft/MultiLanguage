@@ -14,13 +14,13 @@ use Mcrafters\MultiLanguage\Main;
 
 class AvoidOps extends PluginBase implements Listener {
 
-  public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    }
+	public function onEnable(){
+        	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+   	}
 
 	public function onJoin(PlayerJoinEvent $event){
-				$player = $event->getPlayer();
-				$message = "testmessage"
-        $player->sendMessage(MultiLanguage::getInstance()->translate($player, $message);
+		$player = $event->getPlayer();
+		$message = "testmessage";
+        	$player->sendMessage(MultiLanguage::getInstance()->translate($player, $message);
         }
-        }
+}
