@@ -8,17 +8,14 @@ use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 use pocketmine\event\player\PlayerJoinEvent;
 
-use Mcrafters\MultiLanguage;
-
+use Mcrafters\MultiLanguage\Main as ML;
 
 class test extends PluginBase implements Listener {
-
 	public function onEnable(){
-        	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-   	}
-
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	}
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
-		$player->sendMessage(MultiLanguage::getInstance()->translate($player, "testmessage"));
-        }
+		$player->sendMessage(ML::getInstance()->translate($player, "testmessage"));
+	}
 }
