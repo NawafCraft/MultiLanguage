@@ -19,10 +19,15 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		@mkdir($this->getDataFolder(), 0777, true);
 		$this->NL = new Config($this->getDataFolder()."NL.yml", Config::YAML, array());
+		$this->NL->save();
 		$this->EN = new Config($this->getDataFolder()."EN.yml", Config::YAML, array());
+		$this->EN->save();
 		$this->FR = new Config($this->getDataFolder()."FR.yml", Config::YAML, array());
+		$this->FR->save();
 		$this->DE = new Config($this->getDataFolder()."DE.yml", Config::YAML,array());
+		$this->DE->save();
 		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, array());
+		$this->data->save();
 	}
 	
 	public static function getInstance(){
