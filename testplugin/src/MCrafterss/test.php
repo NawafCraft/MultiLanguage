@@ -15,7 +15,6 @@ class test extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	public function onJoin(PlayerJoinEvent $event){
-		$player = $event->getPlayer();
-		$player->sendMessage(ML::getInstance()->Translate($player, "testmessage"));
+		$event->getPlayer->sendMessage(ML::getInstance()->Translate($player, "testmessage"));
 	}
 }
