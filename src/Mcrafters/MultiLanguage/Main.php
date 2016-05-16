@@ -39,9 +39,12 @@ class Main extends PluginBase implements Listener{
 		$this->data->set($player,$language);
 		$this->data->save();
 	}
+	public function setPlayerLang($player){
+		$this->data->get($player);
+	}
 	
 	public function Translate($player, $message, bool $force = false, $issuer = "none") : int{
-		$data = $this->data->get($player);
+		$data === $this->setPlayerLang($player)
 		if ($data === "nl"){
 			$this->NL->get($message);
 		}
