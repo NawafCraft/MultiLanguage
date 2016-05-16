@@ -51,7 +51,7 @@ class Main extends PluginBase implements Listener{
 		if ($data === "fr"){
 			$this->FR->get($message);
 		}
-		if ($data) === "de"){
+		if ($data === "de"){
 			$this->DE->get($message);
 		}
 	}
