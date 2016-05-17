@@ -28,11 +28,12 @@ class Main extends PluginBase implements Listener{
 		$this->saveResource("DE.yml");
 		$this->data = new Config($this->getDataFolder()."Data.yml", Config::YAML, array());
 		$this->saveResource("data.yml");
+		self::$instance = $this;
 	}
 	
 	public static function getInstance(){
-    		$instance = $this;
-    		return $instance;
+    		return self::$instance;
+    		
 	}
 	
 	public function setPlayerLang($player, $language){
