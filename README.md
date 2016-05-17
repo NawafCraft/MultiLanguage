@@ -8,5 +8,5 @@ Your Plugin can now have simple multi Language support
 
 # FEATURES
 - [x] Easy to use
-- [ ] API
+- [x] API
 - [x] Multi Languages
