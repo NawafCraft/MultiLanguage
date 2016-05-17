@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
 	}
 	
 	public static function getInstance(){
-    		$instance = new Main();
+    		$instance = $this;
     		return $instance;
 	}
 	
